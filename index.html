@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App Cover</title>
+    
+</head>
+<body>
+    <div class="shadow-box"></div>
+    <div class="cover">
+        
+        <h1>WEATHER APP</h1>
+        <h2>Let's Discover Today....</h2>
+        <button id="openAppButton">Get Started</button>
+    </div>
+    <div class="app-container">
+        <div class="weather-app">
+            <div class="main-content">
+                <div class="input-container">
+                   <input class="input-field" type="text" placeholder="Enter the location">
+                   <button id="getWeatherButton">Get Weather</button>
+                </div>
+
+                <div class="temp-container">
+                    <span id="temperature-Icon"></span>
+                    <div class="temp-set">
+                        <p>Temperature</p>
+                        <p id="temperature"></p>
+                        <p id="temp-max"> </p>
+                        <p id="temp-min"> </p>
+                     
+                    </div>
+                    <div id="buttons">
+                        <button id="c_btn">C</button>
+                        <button id="F_btn">F</button>
+                    </div> 
+                </div>
+
+               
+                <div class="weather-datas">
+                    <div class="box-1">
+                        <span id="weatherIcon"></span>
+                        <p id="description"></p>
+                    </div>
+                    <div class="box-2">
+                        <p>Humidity</p>
+                        <span id="humidity-Icon"></span>
+                        <p id="humidity"></p>
+                    </div>
+                    <div class="box-3">
+                        <p>Wind Speed</p>
+                        <span id="wind-Icon"></span>
+                        <p id="wind"></p>
+                    </div>
+                    <div class="box-4">
+                        <p>Pressure</p>
+                        <span id="pressure-Icon"></span>
+                        <p id="pressure"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
