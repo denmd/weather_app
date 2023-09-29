@@ -20,14 +20,17 @@ body {
     z-index: 2;
     transition: transform 0.5s ease-in-out;
 }
+
 button {
     padding: 10px 20px;
     background: none;
-    color:black;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    background-color: black;
+    opacity: 0.4;
 }
 
 .app-container {
@@ -35,196 +38,183 @@ button {
     top: 0;
     left: 100%;
     width: 100%;
-    height: 170vh;
-    background-color: #fff;
+    height: auto;
+    background-color:black;
     z-index: 1;
     transition: left 0.5s ease-in-out;
     background-image: url('cover_pg2.jpg');
     background-size: cover;
-    
 }
-#openAppButton{
-    width:200px;
-    height:50px;
-    color: white;
-    background-color: black;
-    opacity: 0.5;
+
+.weather-app {
+    margin: 5% 5%;
+    padding: 2% 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-.weather-app{
-    height: 100vh;
-    margin: 90px 150px;
-    
-}
-.main-content{
+
+.main-content {
     width: 100%;
-    height: 95%;
-    background-color: black; 
+    background-color:black;
     opacity: 0.6;
-    border-radius: 12px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
 }
+
 .input-container {
     display: flex;
     justify-content: center;
+   
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
 
-    
-}
-.input-field{
-    width: 40%;
+.input-field {
+    width: 60%;
     height: 34px;
-    margin-top:40px ;
     border-radius: 15px;
-    border:none;
+    border: none;
     text-align: center;
- 
 }
-#getWeatherButton{
-    height: 50%;
-    background:none;
-    color:white;
+
+#getWeatherButton {
+    background: none;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 40px;
-   
+    margin-left: 10px;
 }
-.weather-datas{
+
+.weather-datas {
     width: 100%;
-    height: 150px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     gap: 10px;
-   
-   
 }
-.box-1,.box-2,.box-3,.box-4{
+
+.box-1, .box-2, .box-3, .box-4 {
     flex: 1;
-    width: 17%;
-    height: 100%;
-    background-color:grey;
+    min-width: 23%;
+    background-color: grey;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    font-size: 20px;
     font-weight: bold;
-   
 }
-#weatherIcon{
-    font-size: 68px;
+
+#weatherIcon {
+    font-size: 3vw;
+}
+
+#humidity-Icon, #wind-Icon{
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
 }
 #humidity-Icon{
-    width: 50px; 
-    height: 50px;
     background-image: url('humidity_logo.png');
-    background-size: cover;
-
 }
 #wind-Icon{
-    width: 50px; 
-    height: 50px;
     background-image: url('wind.png');
-    background-size: cover;
-
 }
 #pressure-Icon{
-    width: 50px; 
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
     background-image: url('pressure.png');
     background-size: cover;
-    
-
 }
-.temp-container{
-    width: 60%;
-    height: 50%;
-    margin-top: 30px;
-    margin-left: 50px;
-    display: flex;
-flex-direction: row;
-background-color: grey;
-justify-content: space-between;
-border-radius: 12px;
-    box-shadow: 3px;
-}
-#temperature-Icon{
-    width: 58vh; 
-    height: 30vh;
-    
-    background-image: url('temperature.png');
-    background-size: cover;
-    margin-left:40px ;
-    margin-top:40px ;
-}
-.temp-set{
-
-    width: 50%;
-    float: right;
+.temp-container {
+    width: 80%;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    margin-left:40px;
+    align-items: center;
+    font-size: 20px;
     font-weight: bold;
 }
-#temperature{
-    font-size: 40px;
+
+#temperature-Icon {
+    width: 10%;
+    height: auto;
+    background-image: url('temperature.png');
+    background-size: cover;
+   
 }
-#temp-max,
-#temp-min {
-    margin: 0; 
-    font-size: 16px;
+
+.temp-set {
+    background-color: grey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 12px;
 }
+
+#temperature {
+    font-size: 4vw;
+}
+
+#temp-max, #temp-min {
+    margin: 0;
+    font-size: 2vw;
+}
+
 #buttons {
     margin-top: 0;
-    height: 25px;
     display: flex;
     flex-direction: row;
     justify-content: start;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
-/* Remove the width and height properties from #c_btn and #F_btn */
-#c_btn,
-#F_btn {
+
+#c_btn, #F_btn {
     background-color: rgb(68, 68, 68);
-    border: 1px solid #fff; /* Add a border style and width */
-    padding: 11px 20px;
-    font-size: 15px;
-    /* Remove font-weight: 30px; */
+    border: 1px solid #fff;
+    padding: 5px 11px;
+    font-size: 2vw;
     text-align: center;
 }
-#c_btn{
-    border-radius: 8px 0 0 8px;
-}
-#F_btn{
-    border-radius: 0 8px 8px 0;
+
+#c_btn {
+    border-radius: 10px 0 0 10px;
 }
 
-
+#F_btn {
+    border-radius: 0 10px 10px 0;
+}
 
 @media (max-width: 768px) {
+   
     .main-content {
         display: flex;
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
     }
+
     .weather-datas {
-        position: relative; 
-        flex-wrap: wrap; 
-        justify-content: flex-start; 
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
-    
+
     .box-1, .box-2, .box-3, .box-4 {
-        flex-basis:calc(50% - 10px); 
+        min-width: calc(50% - 10px);
     }
-    .input-field{
-        width: 180px;
-        height: 34px;
+
+    .input-field {
+        width: 100%;
     }
 }
